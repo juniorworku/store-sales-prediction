@@ -1,0 +1,451 @@
+2024-05-27 14:48:25,632 INFO Training, test, and store data loaded.
+2024-05-27 15:43:47,089 INFO Training, test, and store data loaded.
+2024-05-27 15:43:47,089 INFO Training, test, and store data loaded.
+2024-05-27 15:44:02,543 INFO Training data merged with store data and columns Customers, PromoInterval dropped.
+2024-05-27 15:44:02,543 INFO Training data merged with store data and columns Customers, PromoInterval dropped.
+2024-05-27 15:44:02,554 INFO Testing data merged with store data and columns Id, PromoInterval dropped.
+2024-05-27 15:44:02,554 INFO Testing data merged with store data and columns Id, PromoInterval dropped.
+2024-05-27 15:45:09,268 INFO Categorical columns: ['Date', 'StateHoliday', 'StoreType', 'Assortment']
+2024-05-27 15:45:09,268 INFO Categorical columns: ['Date', 'StateHoliday', 'StoreType', 'Assortment']
+2024-05-27 15:45:17,893 INFO Categorical columns: ['Date', 'StateHoliday', 'StoreType', 'Assortment']
+2024-05-27 15:45:17,893 INFO Categorical columns: ['Date', 'StateHoliday', 'StoreType', 'Assortment']
+2024-05-27 15:45:45,586 INFO Date data has 942 unique values.
+2024-05-27 15:45:45,586 INFO Date data has 942 unique values.
+2024-05-27 15:45:45,667 INFO Date data sample values: 
+Date
+2015-07-31    1115
+2013-11-06    1115
+2013-11-18    1115
+2013-11-17    1115
+2013-11-16    1115
+              ... 
+2014-10-28     935
+2014-10-27     935
+2014-10-26     935
+2014-10-25     935
+2014-12-08     935
+Name: count, Length: 942, dtype: int64
+
+2024-05-27 15:45:45,667 INFO Date data sample values: 
+Date
+2015-07-31    1115
+2013-11-06    1115
+2013-11-18    1115
+2013-11-17    1115
+2013-11-16    1115
+              ... 
+2014-10-28     935
+2014-10-27     935
+2014-10-26     935
+2014-10-25     935
+2014-12-08     935
+Name: count, Length: 942, dtype: int64
+
+2024-05-27 15:45:45,721 INFO StateHoliday data has 4 unique values.
+2024-05-27 15:45:45,721 INFO StateHoliday data has 4 unique values.
+2024-05-27 15:45:45,805 INFO StateHoliday data sample values: 
+StateHoliday
+0    986159
+a     20260
+b      6690
+c      4100
+Name: count, dtype: int64
+
+2024-05-27 15:45:45,805 INFO StateHoliday data sample values: 
+StateHoliday
+0    986159
+a     20260
+b      6690
+c      4100
+Name: count, dtype: int64
+
+2024-05-27 15:45:45,864 INFO StoreType data has 4 unique values.
+2024-05-27 15:45:45,864 INFO StoreType data has 4 unique values.
+2024-05-27 15:45:45,943 INFO StoreType data sample values: 
+StoreType
+a    551627
+d    312912
+c    136840
+b     15830
+Name: count, dtype: int64
+
+2024-05-27 15:45:45,943 INFO StoreType data sample values: 
+StoreType
+a    551627
+d    312912
+c    136840
+b     15830
+Name: count, dtype: int64
+
+2024-05-27 15:45:45,999 INFO Assortment data has 3 unique values.
+2024-05-27 15:45:45,999 INFO Assortment data has 3 unique values.
+2024-05-27 15:45:46,080 INFO Assortment data sample values: 
+Assortment
+a    537445
+c    471470
+b      8294
+Name: count, dtype: int64
+
+2024-05-27 15:45:46,080 INFO Assortment data sample values: 
+Assortment
+a    537445
+c    471470
+b      8294
+Name: count, dtype: int64
+
+2024-05-27 15:46:03,654 INFO Rows with missing values dropped.
+2024-05-27 15:46:03,654 INFO Rows with missing values dropped.
+2024-05-27 15:46:42,527 INFO Date column split into Year, Month, and Day.
+2024-05-27 15:46:42,527 INFO Date column split into Year, Month, and Day.
+2024-05-27 15:47:05,503 INFO Target column Sales relocated to the end.
+2024-05-27 15:47:05,503 INFO Target column Sales relocated to the end.
+2024-05-27 15:47:29,780 INFO Categorical variables encoded.
+2024-05-27 15:47:29,780 INFO Categorical variables encoded.
+2024-05-27 15:47:46,101 INFO Preprocessed data sample: 
+    Store  DayOfWeek  Open  Promo  StateHoliday  SchoolHoliday  StoreType  \
+1       2          5     1      1             0              1          1   
+2       3          5     1      1             0              1          1   
+10     11          5     1      1             0              1          1   
+13     14          5     1      1             0              1          1   
+14     15          5     1      1             0              1          4   
+
+    Assortment  CompetitionDistance  CompetitionOpenSinceMonth  \
+1            1                570.0                       11.0   
+2            1              14130.0                       12.0   
+10           3                960.0                       11.0   
+13           1               1300.0                        3.0   
+14           3               4110.0                        3.0   
+
+    CompetitionOpenSinceYear  Promo2  Promo2SinceWeek  Promo2SinceYear  \
+1                     2007.0       1             13.0           2010.0   
+2                     2006.0       1             14.0           2011.0   
+10                    2011.0       1              1.0           2012.0   
+13                    2014.0       1             40.0           2011.0   
+14                    2010.0       1             14.0           2011.0   
+
+      Year  Month  Sales  
+1   2015.0    7.0   6064  
+2   2015.0    7.0   8314  
+10  2015.0    7.0  10457  
+13  2015.0    7.0   6544  
+14  2015.0    7.0   9191  
+2024-05-27 15:47:46,101 INFO Preprocessed data sample: 
+    Store  DayOfWeek  Open  Promo  StateHoliday  SchoolHoliday  StoreType  \
+1       2          5     1      1             0              1          1   
+2       3          5     1      1             0              1          1   
+10     11          5     1      1             0              1          1   
+13     14          5     1      1             0              1          1   
+14     15          5     1      1             0              1          4   
+
+    Assortment  CompetitionDistance  CompetitionOpenSinceMonth  \
+1            1                570.0                       11.0   
+2            1              14130.0                       12.0   
+10           3                960.0                       11.0   
+13           1               1300.0                        3.0   
+14           3               4110.0                        3.0   
+
+    CompetitionOpenSinceYear  Promo2  Promo2SinceWeek  Promo2SinceYear  \
+1                     2007.0       1             13.0           2010.0   
+2                     2006.0       1             14.0           2011.0   
+10                    2011.0       1              1.0           2012.0   
+13                    2014.0       1             40.0           2011.0   
+14                    2010.0       1             14.0           2011.0   
+
+      Year  Month  Sales  
+1   2015.0    7.0   6064  
+2   2015.0    7.0   8314  
+10  2015.0    7.0  10457  
+13  2015.0    7.0   6544  
+14  2015.0    7.0   9191  
+2024-05-27 15:47:54,498 INFO Categorical variables encoded.
+2024-05-27 15:47:54,498 INFO Categorical variables encoded.
+2024-05-27 15:47:59,593 INFO Preprocessed data sample: 
+    Store  DayOfWeek  Open  Promo  StateHoliday  SchoolHoliday  StoreType  \
+1       2          5     1      1             0              1        NaN   
+2       3          5     1      1             0              1        NaN   
+10     11          5     1      1             0              1        NaN   
+13     14          5     1      1             0              1        NaN   
+14     15          5     1      1             0              1        NaN   
+
+    Assortment  CompetitionDistance  CompetitionOpenSinceMonth  \
+1          NaN                570.0                       11.0   
+2          NaN              14130.0                       12.0   
+10         NaN                960.0                       11.0   
+13         NaN               1300.0                        3.0   
+14         NaN               4110.0                        3.0   
+
+    CompetitionOpenSinceYear  Promo2  Promo2SinceWeek  Promo2SinceYear  \
+1                     2007.0       1             13.0           2010.0   
+2                     2006.0       1             14.0           2011.0   
+10                    2011.0       1              1.0           2012.0   
+13                    2014.0       1             40.0           2011.0   
+14                    2010.0       1             14.0           2011.0   
+
+      Year  Month  Sales  
+1   2015.0    7.0   6064  
+2   2015.0    7.0   8314  
+10  2015.0    7.0  10457  
+13  2015.0    7.0   6544  
+14  2015.0    7.0   9191  
+2024-05-27 15:47:59,593 INFO Preprocessed data sample: 
+    Store  DayOfWeek  Open  Promo  StateHoliday  SchoolHoliday  StoreType  \
+1       2          5     1      1             0              1        NaN   
+2       3          5     1      1             0              1        NaN   
+10     11          5     1      1             0              1        NaN   
+13     14          5     1      1             0              1        NaN   
+14     15          5     1      1             0              1        NaN   
+
+    Assortment  CompetitionDistance  CompetitionOpenSinceMonth  \
+1          NaN                570.0                       11.0   
+2          NaN              14130.0                       12.0   
+10         NaN                960.0                       11.0   
+13         NaN               1300.0                        3.0   
+14         NaN               4110.0                        3.0   
+
+    CompetitionOpenSinceYear  Promo2  Promo2SinceWeek  Promo2SinceYear  \
+1                     2007.0       1             13.0           2010.0   
+2                     2006.0       1             14.0           2011.0   
+10                    2011.0       1              1.0           2012.0   
+13                    2014.0       1             40.0           2011.0   
+14                    2010.0       1             14.0           2011.0   
+
+      Year  Month  Sales  
+1   2015.0    7.0   6064  
+2   2015.0    7.0   8314  
+10  2015.0    7.0  10457  
+13  2015.0    7.0   6544  
+14  2015.0    7.0   9191  
+2024-05-27 15:49:34,246 INFO Training, test, and store data loaded.
+2024-05-27 15:49:34,246 INFO Training, test, and store data loaded.
+2024-05-27 15:49:34,246 INFO Training, test, and store data loaded.
+2024-05-27 15:49:49,946 INFO Training data merged with store data and columns Customers, PromoInterval dropped.
+2024-05-27 15:49:49,946 INFO Training data merged with store data and columns Customers, PromoInterval dropped.
+2024-05-27 15:49:49,946 INFO Training data merged with store data and columns Customers, PromoInterval dropped.
+2024-05-27 15:49:49,990 INFO Testing data merged with store data and columns Id, PromoInterval dropped.
+2024-05-27 15:49:49,990 INFO Testing data merged with store data and columns Id, PromoInterval dropped.
+2024-05-27 15:49:49,990 INFO Testing data merged with store data and columns Id, PromoInterval dropped.
+2024-05-27 15:50:21,982 INFO Categorical columns: ['Date', 'StateHoliday', 'StoreType', 'Assortment']
+2024-05-27 15:50:21,982 INFO Categorical columns: ['Date', 'StateHoliday', 'StoreType', 'Assortment']
+2024-05-27 15:50:21,982 INFO Categorical columns: ['Date', 'StateHoliday', 'StoreType', 'Assortment']
+2024-05-27 15:50:26,597 INFO Date data has 942 unique values.
+2024-05-27 15:50:26,597 INFO Date data has 942 unique values.
+2024-05-27 15:50:26,597 INFO Date data has 942 unique values.
+2024-05-27 15:50:26,809 INFO Date data sample values: 
+Date
+2015-07-31    1115
+2013-11-06    1115
+2013-11-18    1115
+2013-11-17    1115
+2013-11-16    1115
+              ... 
+2014-10-28     935
+2014-10-27     935
+2014-10-26     935
+2014-10-25     935
+2014-12-08     935
+Name: count, Length: 942, dtype: int64
+
+2024-05-27 15:50:26,809 INFO Date data sample values: 
+Date
+2015-07-31    1115
+2013-11-06    1115
+2013-11-18    1115
+2013-11-17    1115
+2013-11-16    1115
+              ... 
+2014-10-28     935
+2014-10-27     935
+2014-10-26     935
+2014-10-25     935
+2014-12-08     935
+Name: count, Length: 942, dtype: int64
+
+2024-05-27 15:50:26,809 INFO Date data sample values: 
+Date
+2015-07-31    1115
+2013-11-06    1115
+2013-11-18    1115
+2013-11-17    1115
+2013-11-16    1115
+              ... 
+2014-10-28     935
+2014-10-27     935
+2014-10-26     935
+2014-10-25     935
+2014-12-08     935
+Name: count, Length: 942, dtype: int64
+
+2024-05-27 15:50:26,975 INFO StateHoliday data has 4 unique values.
+2024-05-27 15:50:26,975 INFO StateHoliday data has 4 unique values.
+2024-05-27 15:50:26,975 INFO StateHoliday data has 4 unique values.
+2024-05-27 15:50:27,494 INFO StateHoliday data sample values: 
+StateHoliday
+0    986159
+a     20260
+b      6690
+c      4100
+Name: count, dtype: int64
+
+2024-05-27 15:50:27,494 INFO StateHoliday data sample values: 
+StateHoliday
+0    986159
+a     20260
+b      6690
+c      4100
+Name: count, dtype: int64
+
+2024-05-27 15:50:27,494 INFO StateHoliday data sample values: 
+StateHoliday
+0    986159
+a     20260
+b      6690
+c      4100
+Name: count, dtype: int64
+
+2024-05-27 15:50:27,700 INFO StoreType data has 4 unique values.
+2024-05-27 15:50:27,700 INFO StoreType data has 4 unique values.
+2024-05-27 15:50:27,700 INFO StoreType data has 4 unique values.
+2024-05-27 15:50:28,052 INFO StoreType data sample values: 
+StoreType
+a    551627
+d    312912
+c    136840
+b     15830
+Name: count, dtype: int64
+
+2024-05-27 15:50:28,052 INFO StoreType data sample values: 
+StoreType
+a    551627
+d    312912
+c    136840
+b     15830
+Name: count, dtype: int64
+
+2024-05-27 15:50:28,052 INFO StoreType data sample values: 
+StoreType
+a    551627
+d    312912
+c    136840
+b     15830
+Name: count, dtype: int64
+
+2024-05-27 15:50:28,283 INFO Assortment data has 3 unique values.
+2024-05-27 15:50:28,283 INFO Assortment data has 3 unique values.
+2024-05-27 15:50:28,283 INFO Assortment data has 3 unique values.
+2024-05-27 15:50:28,613 INFO Assortment data sample values: 
+Assortment
+a    537445
+c    471470
+b      8294
+Name: count, dtype: int64
+
+2024-05-27 15:50:28,613 INFO Assortment data sample values: 
+Assortment
+a    537445
+c    471470
+b      8294
+Name: count, dtype: int64
+
+2024-05-27 15:50:28,613 INFO Assortment data sample values: 
+Assortment
+a    537445
+c    471470
+b      8294
+Name: count, dtype: int64
+
+2024-05-27 15:50:32,870 INFO Rows with missing values dropped.
+2024-05-27 15:50:32,870 INFO Rows with missing values dropped.
+2024-05-27 15:50:32,870 INFO Rows with missing values dropped.
+2024-05-27 15:50:38,283 INFO Date column split into Year, Month, and Day.
+2024-05-27 15:50:38,283 INFO Date column split into Year, Month, and Day.
+2024-05-27 15:50:38,283 INFO Date column split into Year, Month, and Day.
+2024-05-27 15:50:43,868 INFO Target column Sales relocated to the end.
+2024-05-27 15:50:43,868 INFO Target column Sales relocated to the end.
+2024-05-27 15:50:43,868 INFO Target column Sales relocated to the end.
+2024-05-27 15:50:50,985 INFO Categorical variables encoded.
+2024-05-27 15:50:50,985 INFO Categorical variables encoded.
+2024-05-27 15:50:50,985 INFO Categorical variables encoded.
+2024-05-27 15:50:53,914 INFO Preprocessed data sample: 
+    Store  DayOfWeek  Open  Promo  StateHoliday  SchoolHoliday  StoreType  \
+1       2          5     1      1             0              1          1   
+2       3          5     1      1             0              1          1   
+10     11          5     1      1             0              1          1   
+13     14          5     1      1             0              1          1   
+14     15          5     1      1             0              1          4   
+
+    Assortment  CompetitionDistance  CompetitionOpenSinceMonth  \
+1            1                570.0                       11.0   
+2            1              14130.0                       12.0   
+10           3                960.0                       11.0   
+13           1               1300.0                        3.0   
+14           3               4110.0                        3.0   
+
+    CompetitionOpenSinceYear  Promo2  Promo2SinceWeek  Promo2SinceYear  \
+1                     2007.0       1             13.0           2010.0   
+2                     2006.0       1             14.0           2011.0   
+10                    2011.0       1              1.0           2012.0   
+13                    2014.0       1             40.0           2011.0   
+14                    2010.0       1             14.0           2011.0   
+
+      Year  Month  Sales  
+1   2015.0    7.0   6064  
+2   2015.0    7.0   8314  
+10  2015.0    7.0  10457  
+13  2015.0    7.0   6544  
+14  2015.0    7.0   9191  
+2024-05-27 15:50:53,914 INFO Preprocessed data sample: 
+    Store  DayOfWeek  Open  Promo  StateHoliday  SchoolHoliday  StoreType  \
+1       2          5     1      1             0              1          1   
+2       3          5     1      1             0              1          1   
+10     11          5     1      1             0              1          1   
+13     14          5     1      1             0              1          1   
+14     15          5     1      1             0              1          4   
+
+    Assortment  CompetitionDistance  CompetitionOpenSinceMonth  \
+1            1                570.0                       11.0   
+2            1              14130.0                       12.0   
+10           3                960.0                       11.0   
+13           1               1300.0                        3.0   
+14           3               4110.0                        3.0   
+
+    CompetitionOpenSinceYear  Promo2  Promo2SinceWeek  Promo2SinceYear  \
+1                     2007.0       1             13.0           2010.0   
+2                     2006.0       1             14.0           2011.0   
+10                    2011.0       1              1.0           2012.0   
+13                    2014.0       1             40.0           2011.0   
+14                    2010.0       1             14.0           2011.0   
+
+      Year  Month  Sales  
+1   2015.0    7.0   6064  
+2   2015.0    7.0   8314  
+10  2015.0    7.0  10457  
+13  2015.0    7.0   6544  
+14  2015.0    7.0   9191  
+2024-05-27 15:50:53,914 INFO Preprocessed data sample: 
+    Store  DayOfWeek  Open  Promo  StateHoliday  SchoolHoliday  StoreType  \
+1       2          5     1      1             0              1          1   
+2       3          5     1      1             0              1          1   
+10     11          5     1      1             0              1          1   
+13     14          5     1      1             0              1          1   
+14     15          5     1      1             0              1          4   
+
+    Assortment  CompetitionDistance  CompetitionOpenSinceMonth  \
+1            1                570.0                       11.0   
+2            1              14130.0                       12.0   
+10           3                960.0                       11.0   
+13           1               1300.0                        3.0   
+14           3               4110.0                        3.0   
+
+    CompetitionOpenSinceYear  Promo2  Promo2SinceWeek  Promo2SinceYear  \
+1                     2007.0       1             13.0           2010.0   
+2                     2006.0       1             14.0           2011.0   
+10                    2011.0       1              1.0           2012.0   
+13                    2014.0       1             40.0           2011.0   
+14                    2010.0       1             14.0           2011.0   
+
+      Year  Month  Sales  
+1   2015.0    7.0   6064  
+2   2015.0    7.0   8314  
+10  2015.0    7.0  10457  
+13  2015.0    7.0   6544  
+14  2015.0    7.0   9191  
