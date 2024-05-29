@@ -1955,3 +1955,104 @@ Name: count, dtype: int64
 2024-05-29 11:53:08,900 INFO Investigating assortment type on sales...
 2024-05-29 11:56:52,050 INFO analyzing impact of opening or reopening of new competitors on stores
 2024-05-29 11:56:52,050 INFO analyzing impact of opening or reopening of new competitors on stores
+2024-05-29 13:44:09,184 INFO Training, test, and store data loaded.
+2024-05-29 13:44:23,974 INFO Training data merged with store data and columns Customers, PromoInterval dropped.
+2024-05-29 13:44:23,983 INFO Testing data merged with store data and columns Id, PromoInterval dropped.
+2024-05-29 13:44:40,993 INFO Handling missing values...
+2024-05-29 13:44:41,550 INFO Detecting and handling outliers...
+2024-05-29 13:44:41,720 INFO Missing values and outliers handled.
+2024-05-29 13:44:43,637 INFO Categorical columns: ['Date', 'StateHoliday', 'StoreType', 'Assortment', 'PromoInterval']
+2024-05-29 13:44:46,279 INFO Date data has 942 unique values.
+2024-05-29 13:44:46,336 INFO Date data sample values: 
+Date
+2015-01-01    1114
+2013-12-24    1114
+2014-01-01    1114
+2013-12-25    1114
+2013-02-24    1113
+              ... 
+2014-12-16     745
+2014-12-23     739
+2014-12-22     704
+2013-12-16     635
+2014-12-15     620
+Name: count, Length: 942, dtype: int64
+
+2024-05-29 13:44:46,368 INFO StateHoliday data has 4 unique values.
+2024-05-29 13:44:46,410 INFO StateHoliday data sample values: 
+StateHoliday
+0    959606
+a     20165
+b      6655
+c      4089
+Name: count, dtype: int64
+
+2024-05-29 13:44:46,444 INFO StoreType data has 4 unique values.
+2024-05-29 13:44:46,487 INFO StoreType data sample values: 
+StoreType
+a    535077
+d    309038
+c    133872
+b     12528
+Name: count, dtype: int64
+
+2024-05-29 13:44:46,521 INFO Assortment data has 3 unique values.
+2024-05-29 13:44:46,595 INFO Assortment data sample values: 
+Assortment
+a    527062
+c    456016
+b      7437
+Name: count, dtype: int64
+
+2024-05-29 13:44:46,635 INFO PromoInterval data has 3 unique values.
+2024-05-29 13:44:46,714 INFO PromoInterval data sample values: 
+PromoInterval
+Jan,Apr,Jul,Oct     538755
+Feb,May,Aug,Nov     242081
+Mar,Jun,Sept,Dec    209678
+Name: count, dtype: int64
+
+2024-05-29 13:44:48,210 INFO Rows with missing values dropped.
+2024-05-29 13:44:50,965 INFO Extracting date features...
+2024-05-29 13:44:51,409 INFO Date features extracted.
+2024-05-29 13:44:59,294 INFO Converting categorical columns to numerical...
+2024-05-29 13:44:59,445 INFO Categorical columns converted to numerical.
+2024-05-29 13:45:01,860 INFO Target column Sales relocated to the end.
+2024-05-29 13:45:05,368 INFO Preprocessed data sample: 
+   Store  DayOfWeek       Date  Customers  Open  Promo  StateHoliday  \
+1      2          4 2015-07-31        625     1      1             0   
+2      3          4 2015-07-31        821     1      1             0   
+3      4          4 2015-07-31       1498     1      1             0   
+4      5          4 2015-07-31        559     1      1             0   
+5      6          4 2015-07-31        589     1      1             0   
+
+   SchoolHoliday  StoreType  Assortment  ...  CompetitionOpenSinceMonth  \
+1              1          1           1  ...                       11.0   
+2              1          1           1  ...                       12.0   
+3              1          3           3  ...                        9.0   
+4              1          1           1  ...                        4.0   
+5              1          1           1  ...                       12.0   
+
+   CompetitionOpenSinceYear  Promo2  Promo2SinceWeek  Promo2SinceYear  \
+1                    2007.0       1             13.0           2010.0   
+2                    2006.0       1             14.0           2011.0   
+3                    2009.0       0             14.0           2011.0   
+4                    2015.0       0             14.0           2011.0   
+5                    2013.0       0             14.0           2011.0   
+
+     PromoInterval  Year  Month  Day  Sales  
+1  Jan,Apr,Jul,Oct  2015      7   31   6064  
+2  Jan,Apr,Jul,Oct  2015      7   31   8314  
+3  Jan,Apr,Jul,Oct  2015      7   31  13995  
+4  Jan,Apr,Jul,Oct  2015      7   31   4822  
+5  Jan,Apr,Jul,Oct  2015      7   31   5651  
+
+[5 rows x 21 columns]
+2024-05-29 13:45:24,539 INFO Comparing promotion distribution between training and test sets...
+2024-05-29 13:45:34,732 INFO Analyzing sales behavior around holidays...
+2024-05-29 13:45:44,232 INFO Investigating seasonal purchasing behaviors...
+2024-05-29 13:45:52,435 INFO Analyzing correlation between sales and number of customers...
+2024-05-29 13:46:08,564 INFO Analyzing the effect of promotions on sales...
+2024-05-29 13:46:18,188 INFO Investigating customer behavior during store timings...
+2024-05-29 13:46:24,853 INFO Investigating assortment type on sales...
+2024-05-29 13:46:39,654 INFO analyzing impact of opening or reopening of new competitors on stores
